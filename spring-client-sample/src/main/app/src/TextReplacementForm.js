@@ -19,7 +19,7 @@ export default class TextReplacementForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        fetch("http://localhost:8080/api/v1/text/replace", {
+        fetch("http://localhost:8080/api/v1/text/grpc-replace", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

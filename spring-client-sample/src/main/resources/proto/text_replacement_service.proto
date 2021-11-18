@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package com.yurwar.proto;
+
+message TextReplacementRequest {
+  string text = 1;
+  string fromReplace = 2;
+  string toReplace = 3;
+}
+
+message TextReplacementResponse {
+  string replacedText = 1;
+}
+
+service TextReplacementService {
+  rpc replaceText(TextReplacementRequest) returns (TextReplacementResponse);
+}
